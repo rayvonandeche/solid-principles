@@ -1,0 +1,30 @@
+public interface Printer {
+    void print();
+}
+
+public interface Scanner {
+    void scan();
+}
+
+public interface Fax {
+    void fax();
+}
+public class OldPrinter implements Printer {
+    public void print() {
+        System.out.println("Printing document...");
+    }
+}
+
+public class AllInOnePrinter implements Printer, Scanner, Fax {
+    public void print() {
+        System.out.println("Printing document...");
+    }
+
+    public void scan() {
+        System.out.println("Scanning document...");
+    }
+
+    public void fax() {
+        System.out.println("Faxing document...");
+    }
+}
