@@ -14,10 +14,12 @@ class  MySqlDatabase implements Database {
 
 class Application{
   private Database database;
-
-Application(Database database){
+  
+  Application(Database database){
   this.database = database;
-}
+  }
+  
   void run(){
     database.connect();
+  }
 }
