@@ -3,7 +3,7 @@
 // In this example the databse can be swaaped without modifiying thr Application
 
 interface Database {
-  void connect()
+  void connect();
 }
 
 class  MySqlDatabase implements Database {
@@ -28,4 +28,18 @@ class Application{
   void run(){
     database.connect();
   }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        // Using MySqlDatabase
+        Database mysql = new MySqlDatabase();
+        Application app1 = new Application(mysql);
+        app1.run();
+
+        // Using MongoDatabase
+        Database mongo = new MongoDatabase();
+        Application app2 = new Application(mongo);
+        app2.run();
+    }
 }
