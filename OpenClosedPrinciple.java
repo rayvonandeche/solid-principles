@@ -32,7 +32,7 @@ class CalorieCounter {
 }
 
 
-public class Main {
+public class OpenClosedPrinciple {
     public static void main(String[] args) {
         List<CalorieCalculator> foodItems = Arrays.asList(
             new Apple(),
