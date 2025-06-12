@@ -12,6 +12,12 @@ class  MySqlDatabase implements Database {
   }
 }
 
+class MongoDatabase implements Database {
+  public void connect(){
+    System.out.println("Connecting to MongoDB..")
+  }
+}
+
 class Application{
   private Database database;
   
