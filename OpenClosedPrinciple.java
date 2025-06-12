@@ -5,7 +5,8 @@ interface CalorieCalculator {
     //This interface is closed for modification because its definition doesn't need to change when new food types are added.
 }
 
-//You can add new food types (like Banana and Avocado) without modifying the existing Apple or Banana classes. This demonstrates that the code is open for extension.
+//You can add new food types (like Banana and Avocado) without modifying the existing Apple or Banana classes. 
+//This demonstrates that the code is open for extension.
 class Apple implements CalorieCalculator {
     public int calculateCalories() {
         return 95;
