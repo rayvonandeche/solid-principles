@@ -1,6 +1,28 @@
 // Interface Segregation Principle
 // Interfaces should be specific rather than doing many diffrent things
 // Larger interfaces should be decomposed to smaller ones
+//Violating Isp
+public interface Machine {
+    void print();
+    void scan();
+    void fax();
+}
+
+public class OldPrinter implements Machine {
+    public void print() {
+        System.out.println("Printing document...");
+    }
+
+    public void scan() {
+        throw new UnsupportedOperationException("Scan not supported");
+    }
+
+    public void fax() {
+        throw new UnsupportedOperationException("Fax not supported");
+    }
+}
+
+//Adherence
 public interface Printer {
     void print();
 }
