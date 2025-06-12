@@ -1,3 +1,6 @@
+// Interface Segregation Principle
+// Interfaces should be specific rather than doing many diffrent things
+// Larger interfaces should be decomposed to smaller ones
 public interface Printer {
     void print();
 }
